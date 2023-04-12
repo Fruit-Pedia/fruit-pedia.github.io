@@ -35,9 +35,9 @@ export function searchView(ctx) {
   async function onSubmit(data) {
     hasInput = true;
     let hasResult = false;
-    const resultSeach = {results: []} //await searchEngine(data.search);
+    const results = await searchEngine(data.search)
 
-    const resultFromSearch = resultSeach.results;
+    const resultFromSearch = results.results;
 
     if (resultFromSearch.length !== 0) {
       hasResult = true;
